@@ -1,5 +1,6 @@
 (function() {
   function HomeCtrl(Room) {
+    console.log(Room.all);
     this.rooms = Room.all;
   }
 
