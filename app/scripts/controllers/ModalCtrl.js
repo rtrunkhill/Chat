@@ -4,15 +4,13 @@
       $uibModalInstance.dismiss();
     };
     this.submit = function() {
-      Room.add();
-      $uibModalInstance.close()
+      Room.add(this.newRoom);
+      $uibModalInstance.close();
     };
 
   }
 
   angular
-  .module('blocChat', ['ui.bootstrap'])
-  .controller('ModalCtrl', ['Room', $uibModalInstance, ModalCtrl]);
+  .module('blocChat')
+  .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
 })();
-
-// will need a submit and cancel button

@@ -1,0 +1,14 @@
+<div><h2>Name your room!</h2></div>
+<!--input box-->
+<!-- <div class='room-input' ng-controller='modal'><input ng-model='newRoom'></div> -->
+<input type="text" name="input" ng-model="modal.newRoom">
+<script>
+newRoom.$id = input;
+</script>
+<div><h2>  </h2></div>
+<div class="confirm-deny">
+  <!--submit button-->
+  <button type="button" class="btn" ng-click='modal.submit()'>Add Room</button>
+  <button type="button" class="btn" ng-click='modal.cancel()'>Cancel</button>
+  <!--cancel button-->
+</div>
