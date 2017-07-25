@@ -1,8 +1,25 @@
-
-    <h1>Bloc Chat</h1>
-    <button type="button" class="btn btn-default" ng-click="home.addRoom()">Create New Room</button>
-    <div ng-repeat="room in home.rooms">
-        <h3>{{ room.$value }}</h3>
-    </div>
-
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+nav {
+  float:left;
+  max-width: 150px;
+  margin: 0;
+  background-color: rgb(43,157,192);
+  border-right: 1px solid black;
+}
+</style>
+</head>
+<body>
+<nav>
+  <h1>Bloc Chat</h1>
+  <button type="button" class="btn btn-default" ng-click="home.addRoom()">Create New Room</button>
+  <div ng-repeat="room in home.rooms">
+    <h3>{{ room.$value }}</h3>
+  </div>
+<nav>
+<section></section>
+</body>
+</html>
     <!--connect button to modal.html-->
