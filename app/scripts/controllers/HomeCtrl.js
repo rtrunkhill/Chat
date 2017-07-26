@@ -2,6 +2,8 @@
   function HomeCtrl(Room, $uibModal) {
     console.log(Room.all);
     this.rooms = Room.all;
+    this.activeRoom = null;
+
     this.addRoom = function() {
       $uibModal.open({
         templateUrl: '/templates/modal.html',
@@ -9,6 +11,10 @@
         controller: 'ModalCtrl as modal'
       });
     }
+    // this funciton only works once
+    this.activeRoom = function(room) {
+      this.activeRoom = room;
+    };
   }
 
   angular

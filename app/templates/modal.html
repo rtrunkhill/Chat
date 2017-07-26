@@ -1,14 +1,39 @@
-<div><h2>Name your room!</h2></div>
+<div style="display:block;margin-left:auto;margin-right:auto;" align="center" class="modal-header"><h2>Name your room!</h2></div>
 <!--input box-->
 <!-- <div class='room-input' ng-controller='modal'><input ng-model='newRoom'></div> -->
-<input type="text" name="input" ng-model="modal.newRoom">
+<input style="display:block;margin-left:auto;margin-right:auto;" align="center" type="text" name="input" ng-model="modal.newRoom">
+
 <script>
 newRoom.$id = input;
 </script>
+
 <div><h2>  </h2></div>
-<div class="confirm-deny">
+
   <!--submit button-->
-  <button type="button" class="btn" ng-click='modal.submit()'>Add Room</button>
-  <button type="button" class="btn" ng-click='modal.cancel()'>Cancel</button>
+  <div class='row'>
+    <div class="col-xs-1"></div>
+    <div class="col-xs-4">
+      <button type="button" class="btn btn-primary" ng-click='modal.submit()'>Add Room</button>
+    </div>
+    <div class="col-xs-2"></div>
+    <div class="col-xs-4">
+      <button type="button" class="btn btn-primary" ng-click='modal.cancel()'>Cancel</button>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
   <!--cancel button-->
 </div>
+
+
+<!-- <div class="modal-header">
+<h3 class="modal-title" id="modal-title">Create a New Room</h3>
+</div>
+<div class="modal-body">
+<form>
+<input type="text" ng-model="modal.room.name" name="new-room" placeholder="Enter a Room Name"></input>
+</form>
+</div>
+<div class="modal-footer">
+<button name="Create Room" class="btn btn-success btn-modal" ng-click="modal.open()"><i class="fa fa-check fa-lg" aria-hidden="true"></i></button>
+<button name="Cancel" class="btn btn-danger btn-modal" ng-click="modal.cancel()"><i class="fa fa-ban fa-lg" aria-hidden="true"></i></button>
+</div> -->
