@@ -24,13 +24,14 @@ li {
   <button style="display:block;margin-left:auto;margin-right:auto;" align="center" type="button" class="btn btn-primary" ng-click="home.addRoom()">Create New Room</button>
   <div><h4></h4></div>
   <div ng-repeat="room in home.rooms"><!--added ng-click="home.activeRoom()"-->
-  <ul><li ng-click="home.activeRoom(room)">{{ room.$value }}</li></ul>
+    <ul><li ng-click="home.setRoom(room)">{{ room.$value }}</li></ul>
   </div>
 </nav>
 <container class="col-md-9">
-<!--title of section should be current room, start here-->
+  <!--title of section should be current room-->
   <header>{{ home.activeRoom.$value }}</header>
-<!-- click on chat room from nav opens room in body -->
+  <!-- click on chat room from nav opens room in body -->
+  <!-- <div>{{ home.activeRoom.$messages }}</div> -->
 </container>
 
-    <!--connect button to modal.html-->
+<!--connect button to modal.html-->

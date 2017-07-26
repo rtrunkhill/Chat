@@ -10,12 +10,13 @@
         size: 'sm',
         controller: 'ModalCtrl as modal'
       });
-    }
-    // this funciton only works once
-    this.activeRoom = function(room) {
+    };
+    this.setRoom = function(room) {
       this.activeRoom = room;
     };
-  }
+  };
+
+
 
   angular
   .module('blocChat')
