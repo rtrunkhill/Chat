@@ -6,11 +6,11 @@
 
     Message.getByRoomId = function(roomId) {
         // Filter the messages by their room ID.
-        messages.orderByChild();
+      return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
     };
 
     return Message;
-    };
+
   }
 
   angular

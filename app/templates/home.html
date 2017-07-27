@@ -31,6 +31,14 @@ li {
   <!--title of section should be current room-->
   <header>{{ home.activeRoom.$value }}</header>
   <!-- click on chat room from nav opens room in body -->
+  <div ng-repeat="message in home.messages">
+          <div><h5>from:</h5></div>
+          <div style='text-indent: 50px; font-size:25px;'>{{ message.username }}</div>
+          <div><h5>at:</h5></div>
+          <div style='text-indent: 50px;'>{{ message.sentAt }}</div>
+          <div><h5>message:</h5></div>
+          <div style='text-indent: 50px; font-size:25px;'>{{ message.content }}</div>
+      </div>
   <!-- <div>{{ home.activeRoom.$messages }}</div> -->
 </container>
 

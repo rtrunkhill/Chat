@@ -13,9 +13,8 @@
     };
     this.setRoom = function(room) {
       this.activeRoom = room;
+      this.messages = Message.getByRoomId(this.activeRoom.$id);
     };
-
-    //get messages function?
   }
 
 
