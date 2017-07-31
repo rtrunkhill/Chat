@@ -3,7 +3,7 @@
     var Message = {};
     var ref = firebase.database().ref().child("messages");
     var messages = $firebaseArray(ref);
-
+    
     Message.getByRoomId = function(roomId) {
         // Filter the messages by their room ID.
       return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
@@ -17,4 +17,3 @@
     .module('blocChat')
     .factory('Message', ['$firebaseArray', Message]);
 })();
-//inject into HomeCtrl then update home.html

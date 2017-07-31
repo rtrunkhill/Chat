@@ -7,6 +7,7 @@
     Room.all = rooms;
 
     Room.add = function(room) {
+      //should i replace this w/ .push()?
       rooms.$add(room);
     };
 
