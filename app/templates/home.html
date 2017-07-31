@@ -1,6 +1,7 @@
 <style>
 nav {
   float: left;
+  height: 100%;
   background-color: rgb(43,157,192);
   border-right: 1px solid black;
 }
@@ -17,6 +18,15 @@ h1 {
 li {
   font-size: 1.5em;
 }
+
+footer {
+  background-color:#606060 ;
+  color: #ffffff;
+  height: 75px;
+  bottom:0px;
+  position:fixed;
+  width:100%;
+}
 </style>
 
 <nav class="col-md-3">
@@ -32,14 +42,18 @@ li {
   <header>{{ home.activeRoom.$value }}</header>
   <!-- click on chat room from nav opens room in body -->
   <div ng-repeat="message in home.messages">
-          <div><h5>from:</h5></div>
-          <div style='text-indent: 50px; font-size:25px;'>{{ message.username }}</div>
-          <div><h5>at:</h5></div>
-          <div style='text-indent: 50px;'>{{ message.sentAt }}</div>
-          <div><h5>message:</h5></div>
-          <div style='text-indent: 50px; font-size:25px;'>{{ message.content }}</div>
-      </div>
-  <!-- <div>{{ home.activeRoom.$messages }}</div> -->
+    <div><h5>from:</h5></div>
+    <div style='text-indent: 50px; font-size:25px;'>{{ message.username }}</div>
+    <div><h5>at:</h5></div>
+    <div style='text-indent: 50px;'>{{ message.sentAt }}</div>
+    <div><h5>message:</h5></div>
+    <div style='text-indent: 50px; font-size:25px;'>{{ message.content }}</div>
+  </div>
+  <div style="position: fixed; bottom: 0; width: 100%;" class='row'>
+    <div class="col-xs-8"><input type="text" name="input" placeholder="Send a message" ng-model="home.newMessage.content"></div>
+    <div class="col-xs-4"><button type='button' class='btn btn-primary' ng-click='home.sendMessage()'>Send</button></div>
+  </div>
+
 </container>
 
-<!--connect button to modal.html-->
+<!-- <input type="text" name="input" ng-model="modal.newRoom"> -->

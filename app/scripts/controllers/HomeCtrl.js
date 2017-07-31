@@ -3,6 +3,7 @@
     console.log(Room.all);
     this.rooms = Room.all;
     this.activeRoom = null;
+    this.currentUser = $cookies.get('blocChatCurrentUser');
 
     this.addRoom = function() {
       $uibModal.open({
@@ -11,11 +12,18 @@
         controller: 'ModalCtrl as modal'
       });
     };
+
     this.setRoom = function(room) {
       this.activeRoom = room;
       this.messages = Message.getByRoomId(this.activeRoom.$id);
-      // this.messages.username = blocChatCurrentUser;
     };
+
+    this.sendMessage = function() {
+      this.newMessage.roomId = this.activeRoom.$id;
+      this.newMessage.username = this.currentUser;
+      Message.send(this.newMessage);
+    };
+
   }
 
 
